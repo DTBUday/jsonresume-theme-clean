@@ -1,0 +1,15 @@
+unless _.isEmpty(resume.work)
+	.detail#work
+		hr
+		h3.title.text-uppercase Work Experience
+		hr
+
+		#wrapper
+			each experience in resume.work
+				.content
+					.date
+						|#{experience.startDate} - #{experience.endDate || 'Present'}
+					.info
+						strong= experience.position
+						|, #{experience.name}
+						.mop-wrapper.space-bottom!= experience.summary

@@ -1,0 +1,13 @@
+unless _.isEmpty(resume.references)
+	.detail#references
+		hr
+		h333.title.text-uppercase References
+		hr
+
+		.content
+			ul
+				each ref in resume.references
+					li
+						strong= ref.name
+						|, #{ref.position}
+						p= ref.email

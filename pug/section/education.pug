@@ -1,0 +1,16 @@
+unless _.isEmpty(resume.education)
+	.detail#education
+		hr
+		h3.title.text-uppercase Education
+		hr
+
+		each school in resume.education
+			.content
+				.date
+					|#{school.startDate} - #{school.endDate || 'Present'}
+				.info
+					strong= school.title
+					|, #{school.institution}
+					if school.gpa
+						.mop-wrapper= school.summary
+

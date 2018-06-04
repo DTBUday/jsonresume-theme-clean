@@ -1,0 +1,19 @@
+unless _.isEmpty(resume.languages)
+	.detail#skills
+		hr
+		h3.title.text-uppercase Skills
+		hr
+
+		unless _.isEmpty(resume.languages.advance)
+			.content
+				.description
+					strong= "Advance languages        : "
+				.languages
+					|#{resume.languages.advance}
+
+		unless _.isEmpty(resume.languages.intermediate)
+			.content
+				.description
+					strong= "Intermediate languages   : "
+				.languages
+					|#{resume.languages.intermediate}

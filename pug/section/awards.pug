@@ -1,0 +1,15 @@
+unless _.isEmpty(resume.awards)
+	.detail#awards
+		hr
+		h3.title.text-uppercase Awards
+		hr
+
+		each award in resume.awards
+			.content
+				.date
+					|#{award.date}
+				.info
+					strong= award.title
+					|, #{award.host}
+					p.text-muted
+						| Awarded by #{award.awarder}
