@@ -1,7 +1,6 @@
 # Private files
 resume.json
-index.html
-index.pdf
+build/
 
 # Logs
 logs
