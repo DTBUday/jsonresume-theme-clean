@@ -12,7 +12,7 @@ module.exports = function(grunt) {
           }
         },
         exec: {
-            cmd: "node build.js"
+            cmd: "node build.js & firefox " + __dirname + "/build/index.html &"
         },
         copy: {
             build: {
