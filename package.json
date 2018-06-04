@@ -1,0 +1,19 @@
+{
+  "name": "jsonresume-theme-clean",
+  "version": "1.0.0",
+  "description": "Clean resume mainly for pdf ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DTBUday/jsonresume-theme-clean.git"
+  },
+  "author": "uday",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DTBUday/jsonresume-theme-clean/issues"
+  },
+  "homepage": "https://github.com/DTBUday/jsonresume-theme-clean#readme"
+}
