@@ -1,4 +1,11 @@
+var _ = require('underscore');
+var utils = require('jsonresume-themeutils');
+var pug = require('pug');
+var fs = require('fs');
+
 function render(resume) {
+	var css = fs.readFileSync(__dirname + '/assets/css/theme.css', 'utf-8');
+
 	var addressAttrs = ['address', 'city', 'region', 'countryCode', 'postalCode'];
 	var addressValues = _(addressAttrs).map(function(key) {
 	        return resume.basics.location[key];
