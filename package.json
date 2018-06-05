@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/DTBUday/jsonresume-theme-clean.git"
   },
-  "author": "uday",
+  "author": "Uday Patel",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/DTBUday/jsonresume-theme-clean/issues"
@@ -24,5 +24,6 @@
     "grunt-exec": "^3.0.0",
     "moment": "^2.22.2",
     "node": "^10.3.0"
-  }
+  },
+  "devDependencies": {}
 }
