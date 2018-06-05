@@ -5,15 +5,15 @@ unless _.isEmpty(resume.languages)
 		hr
 
 		unless _.isEmpty(resume.languages.advance)
-			.content
+			#skills.content
 				.description
-					strong= "Advance languages        : "
+					strong= "Advance languages"
 				.languages
 					|#{resume.languages.advance}
 
 		unless _.isEmpty(resume.languages.intermediate)
-			.content
+			#skills.content
 				.description
-					strong= "Intermediate languages   : "
+					strong= "Intermediate languages"
 				.languages
 					|#{resume.languages.intermediate}

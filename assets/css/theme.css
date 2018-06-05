@@ -1,8 +1,9 @@
 body {
-	height: 842px;
     width: 595px;
     margin: auto;
+	padding: 2.6em 2.6em;
 	line-height: 1.8;
+	font-size: 9px;
 }
 
 .container-fluid {
@@ -22,32 +23,49 @@ h1 {
 
 p.header {
 	font-style: oblique;
+	margin: 0px 0px 10px;
+}
+
+#work.detail {
+	margin-top: 20px;
+}
+
+.detail {
+	margin-bottom: 20px;
 }
 
 hr {
 	background-color: #3c3c3c;
-}
-
-#work {
-	margin: auto;
-	width: auto;
-	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .title {
 	margin: auto;
 	text-align: center;
-	text-size: 2em;
+	/* text-size: 2em; */
 	font-weight: bold;
+	font-size: 15px;
+	padding: 0px 0px;
 }
 
 .content {
 	display: table-row;
 }
 
-.content:after {
+#work.content:after {
     content:"\a\a\a";
     white-space: pre;
+}
+
+#education.content:after {
+	content: "\a\a";
+	white-space: pre;
+}
+
+#skills.content:after {
+	content: "\a\a";
+	white-space: pre;
 }
 
 .date, .info {
@@ -63,5 +81,5 @@ hr {
 }
 
 .description {
-	min-width: 175px;
+	min-width: 150px;
 }

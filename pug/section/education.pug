@@ -5,7 +5,7 @@ unless _.isEmpty(resume.education)
 		hr
 
 		each school in resume.education
-			.content
+			#education.content
 				.date
 					|#{school.startDate} - #{school.endDate || 'Present'}
 				.info
