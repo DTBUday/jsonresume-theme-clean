@@ -39,16 +39,27 @@ function render(resume) {
 		}
 	});
 
-	resume.languages.advance = [];
+	resume.languages.master = [];
+	resume.languages.advanced = [];
 	resume.languages.intermediate = [];
 
-	_.each(resume.languages, function(lang) {
-		if (lang.level === 'Advance') {
-			resume.languages.advance.push(lang.name);
+	_.each(resume.skills, function(skill) { 
+		if (skill.level === 'Advanced') {
+			_.each(skill.keywords, function(lang) {
+				resume.languages.advanced.push(lang);
+			}
 		}
 
-		if (lang.level === 'Intermediate') {
-			resume.languages.intermediate.push(lang.name);
+		if (skill.level === 'Intermediate') {
+			_.each(skill.keywords, function(lang) {
+				resume.languages.intermediate.push(lang);
+			}
+		}
+
+		if (skill.level === 'Master') {
+			_.each(skill.keywords, function(lang) {
+				resume.languages.intermediate.push(lang);
+			}
 		}
 	});
 

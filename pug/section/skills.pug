@@ -4,12 +4,19 @@ unless _.isEmpty(resume.languages)
 		h3.title.text-uppercase Skills
 		hr
 
-		unless _.isEmpty(resume.languages.advance)
+		unless _.isEmpty(resume.languages.master)
+			#skills.content
+				.description
+					strong= "Master languages"
+				.languages
+					|#{resume.languages.master}
+
+		unless _.isEmpty(resume.languages.advanced)
 			#skills.content
 				.description
 					strong= "Advance languages"
 				.languages
-					|#{resume.languages.advance}
+					|#{resume.languages.advanced}
 
 		unless _.isEmpty(resume.languages.intermediate)
 			#skills.content
