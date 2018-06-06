@@ -39,32 +39,34 @@ function render(resume) {
 		}
 	});
 
-	resume.languages.master = [];
-	resume.languages.advanced = [];
-	resume.languages.intermediate = [];
+	resume.masterLang = [];
+	resume.advancedLang = [];
+	resume.intermediateLang = [];
 
 	_.each(resume.skills, function(skill) { 
+		if (skill.level === 'Master') {
+			_.each(skill.keywords, function(lang) {
+				resume.masterLang.push(lang);
+			});
+		}
+
 		if (skill.level === 'Advanced') {
 			_.each(skill.keywords, function(lang) {
-				resume.languages.advanced.push(lang);
-			}
+				resume.advancedLang.push(lang);
+			});
 		}
 
 		if (skill.level === 'Intermediate') {
 			_.each(skill.keywords, function(lang) {
-				resume.languages.intermediate.push(lang);
-			}
-		}
-
-		if (skill.level === 'Master') {
-			_.each(skill.keywords, function(lang) {
-				resume.languages.intermediate.push(lang);
-			}
+				resume.intermediateLang.push(lang);
+			});
 		}
 	});
 
-	resume.languages.advance = _.compact(resume.languages.advance).join(', ');
-	resume.languages.intermediate = _.compact(resume.languages.intermediate).join(', ');
+	//resume.languages.
+	resume.masterLang = _.compact(resume.masterLang).join(', ');
+	resume.advanceLang = _.compact(resume.advanceLang).join(', ');
+	resume.intermediateLang = _.compact(resume.intermediateLang).join(', ');
 
 	_.each(resume.awards, function(award) {
 		if (award.date) {
@@ -82,3 +84,4 @@ function render(resume) {
 module.exports = {
 	render: render
 };
+
