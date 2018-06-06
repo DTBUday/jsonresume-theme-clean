@@ -1,26 +1,25 @@
-unless _.isEmpty(resume.languages)
-	.detail#skills
-		hr
-		h3.title.text-uppercase Skills
-		hr
+.detail#skills
+	hr
+	h3.title.text-uppercase Skills
+	hr
 
-		unless _.isEmpty(resume.languages.master)
-			#skills.content
-				.description
-					strong= "Master languages"
-				.languages
-					|#{resume.languages.master}
+	unless _.isEmpty(resume.masterLang)
+		#skills.content
+			.description
+				strong= "Master languages"
+			.languages
+				|#{resume.masterLang}
 
-		unless _.isEmpty(resume.languages.advanced)
-			#skills.content
-				.description
-					strong= "Advance languages"
-				.languages
-					|#{resume.languages.advanced}
+	unless _.isEmpty(resume.advancedLang)
+		#skills.content
+			.description
+				strong= "Advance languages"
+			.languages
+				|#{resume.advancedLang}
 
-		unless _.isEmpty(resume.languages.intermediate)
-			#skills.content
-				.description
-					strong= "Intermediate languages"
-				.languages
-					|#{resume.languages.intermediate}
+	unless _.isEmpty(resume.intermediateLang)
+		#skills.content
+			.description
+				strong= "Intermediate languages"
+			.languages
+				|#{resume.intermediateLang}
